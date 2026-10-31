@@ -3,11 +3,11 @@
 One streamlined page for **balancebygarrett.com** with four ways to feel better:
 
 1. **The Glendale gym:** personal training ($55 / 25 min, $95 / 55 min) and small group ($160 / month, Mon, Wed, Thu at 9 AM).
-2. **Remote health coaching:** Trainerize app, $100 / month.
+2. **Remote health coaching:** Trainerize app, $300 / month.
 3. **Bare Min by Garrett app:** free, Balance Plus, Balance Coach, with a QR code to get the app.
 4. **Corporate wellness:** free 30-day team pilot, team app license, coached challenge, talks.
 
-Plus a "Bottomless Bucket is back in 2027" note, a testimonial and a free movement screen call to action.
+Plus a "Bottomless Bucket is back in 2027" note, a testimonial and a free consultation call to action.
 
 It is a plain static site (`index.html`, `img/`, `vercel.json`) with no build step, so it runs on Vercel, Netlify, GitHub Pages or any web host.
 
@@ -40,6 +40,6 @@ Use the exact values Vercel shows on the Domains page if they differ. DNS can ta
 ## Still to add
 
 - **Logo:** save the Balance by Garrett logo as `img/logo.png` (about 570 × 96). Until then the header tries the logo on the Wix site, then falls back to text.
-- **Booking:** a WellnessLiving booking link for the free movement screen (now phone and email).
+- **Booking:** a WellnessLiving booking link for the free consultation (now phone and email).
 - **App store links** for the "Get the app" buttons, then the `vercel.json` change above.
 - **Email list:** the signup form opens an email to Garrett; swap in a Mailchimp or similar form when ready.

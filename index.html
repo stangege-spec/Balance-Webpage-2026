@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
 <style>
-/* Barest-essentials homepage: hero, four ways to feel better, Bare Min in two slides, free screen CTA, then review and press at the bottom. Light palette from the Bare Min app. */
+/* Barest-essentials homepage: hero, four ways to feel better, Bare Min in two slides, free consultation CTA, then review and press at the bottom. Light palette from the Bare Min app. */
 :root{
   --bg:#f6f9fc; --paper:#ffffff; --cream:#fdf8ec; --ink:#141e2b; --muted:#4d5d70; --line:#dde6ef;
   --navy:#1b3a5c; --gold:#c8a84b; --gold-ink:#7f651c;
@@ -106,15 +106,56 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-betw
 footer a{text-decoration:none}
 footer a:hover{color:var(--navy)}
 
+.nav-links{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px;margin-left:auto;margin-right:6px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--navy)}
+
+.buy{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.item{display:flex;flex-direction:column;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;min-width:0}
+.item h3{font-size:22px}
+.item p{color:var(--muted);font-size:15.5px;flex:1}
+.item .price{font-family:var(--display);font-weight:800;font-size:19px;color:var(--navy)}
+.item .price small{font-family:var(--text);font-weight:600;font-size:13px;color:var(--muted)}
+.item .btn{align-self:flex-start;margin-top:6px}
+.stores{display:flex;flex-wrap:wrap;gap:10px}
+.grow{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px}
+.grow-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px;margin-bottom:14px}
+.grow-head h3{font-size:22px}
+.grow-head span{color:var(--muted);font-size:15px}
+.mods{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.mods li{display:flex;align-items:center;gap:12px;padding-block:10px;border-top:1px solid var(--line);font-weight:700;font-size:15.5px;min-width:0}
+.mods li span{flex:1;min-width:0}
+.mods a{font-size:14px;font-weight:800;color:var(--gold-ink);text-decoration:none;white-space:nowrap}
+.mods a:hover{text-decoration:underline}
+
+.bio{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.bio img{width:200px}
+.bio p{color:var(--muted);font-size:17px;margin-top:14px;max-width:40em}
+.bio .creds{font-size:14px;margin-top:16px}
+.bio a{font-weight:800;color:var(--gold-ink)}
+
+.reads{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.reads h3{font-size:20px;margin-bottom:12px;color:var(--navy)}
+.posts{list-style:none;margin:0;padding:0}
+.posts li{border-top:1px solid var(--line)}
+.posts a{display:block;padding-block:12px;text-decoration:none;font-weight:700;font-size:17px}
+.posts a span{display:block;font-weight:600;font-size:13px;color:var(--muted)}
+.posts a:hover{color:var(--navy)}
+.more{display:inline-block;margin-top:12px;font-weight:800;color:var(--gold-ink);text-decoration:none}
+.fb{width:100%;max-width:500px;height:520px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+
 @media (max-width:900px){
   .ways{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .bm,.proof-grid{grid-template-columns:1fr}
+  .bm,.proof-grid,.reads{grid-template-columns:1fr}
+  .nav-links{display:none}
 }
 @media (max-width:640px){
   .hero-grid,.final-grid{grid-template-columns:1fr}
   .hero-art{display:none}
   .hero{padding-block:44px 40px}
-  .ways{grid-template-columns:1fr}
+  .ways,.buy,.mods{grid-template-columns:1fr}
+  .bio{grid-template-columns:1fr}
+  .bio img{width:140px}
   .final img{width:140px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -124,7 +165,8 @@ footer a:hover{color:var(--navy)}
 <header class="top">
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Balance by Garrett home"><img src="img/logo.png" alt="Balance by Garrett" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://static.wixstatic.com/media/b46f1b_b5e03ea472f54ab3ad414bae23992d7f~mv2.png/v1/fill/w_570,h_96,al_c,q_85/logo.png'}else{this.hidden=true;this.nextElementSibling.hidden=false}"><span hidden>Balance <small>by Garrett</small></span></a>
-    <a class="btn btn-gold" href="#start">Free screen</a>
+    <nav class="nav-links" aria-label="Main"><a href="#shop">Shop</a><a href="#about">About</a><a href="#blog">Blog</a></nav>
+    <a class="btn btn-gold" href="#start">Free consultation</a>
   </div>
 </header>
 
@@ -135,7 +177,7 @@ footer a:hover{color:var(--navy)}
         <h1>Feel <em>better.</em></h1>
         <p class="lede">Safe, science-based exercise and small daily habits that stick. In Glendale, from anywhere, or at work.</p>
         <div class="ctas">
-          <a class="btn btn-navy" href="#start">Book a free movement screen</a>
+          <a class="btn btn-navy" href="#start">Book a free consultation</a>
           <a class="btn btn-line" href="#app">Get the free app</a>
         </div>
       </div>
@@ -148,7 +190,7 @@ footer a:hover{color:var(--navy)}
       <h2>Four ways to feel better.</h2>
       <div class="ways">
         <div class="way" style="--c:var(--gym)"><h3>Train at the gym</h3><p>Personal training or a small group of six, in Glendale.</p><span class="price">$55 <small>/ 25 min</small> · $95 <small>/ 55 min</small></span><span class="price">$160 <small>/ month small group</small></span></div>
-        <div class="way" style="--c:var(--remote)"><h3>Remote coaching</h3><p>Your plan in the Trainerize app, with Garrett checking in.</p><span class="price">$100 <small>/ month</small></span></div>
+        <div class="way" style="--c:var(--remote)"><h3>Remote coaching</h3><p>Your plan in the Trainerize app, with Garrett checking in.</p><span class="price">$300 <small>/ month</small></span></div>
         <div class="way" style="--c:var(--app)"><h3>Bare Min app</h3><p>Three tiny actions a day for Mind, Body and Spirit.</p><span class="price">Free <small>to start</small></span></div>
         <div class="way" style="--c:var(--team)"><h3>Your team</h3><p>A 30-day team challenge with coaching and a results report.</p><span class="price">Free <small>30-day pilot</small></span></div>
       </div>
@@ -177,14 +219,82 @@ footer a:hover{color:var(--navy)}
     </div>
   </section>
 
+  <section class="band white" id="shop">
+    <div class="wrap">
+      <h2>Shop Bare Min.</h2>
+      <div class="buy">
+        <div class="item">
+          <h3>Bare Min by Garrett app</h3>
+          <p>The daily dose, correctives, health battery and streaks. Start free, upgrade to Balance Plus in the app.</p>
+          <span class="price">Free · Balance Plus $12.99 <small>/ mo or $69.99 / yr</small></span>
+          <div class="stores"><a class="btn btn-navy" href="/app">App Store</a><a class="btn btn-navy" href="/app">Google Play</a></div>
+        </div>
+        <div class="item">
+          <h3>Bare Minimum to Feel Better workbook</h3>
+          <p>Find your "ready for anything" goal, run your first experiments and write your personal health manifesto.</p>
+          <span class="price">Sold on Amazon</span>
+          <a class="btn btn-navy" href="mailto:gstangel@livebalancefit.com?subject=Bare%20Minimum%20to%20Feel%20Better%20workbook">Buy on Amazon</a>
+        </div>
+      </div>
+      <div class="grow" id="grow">
+        <div class="grow-head"><h3>Bare Min Grow modules</h3><span>Eight 4-week modules, one pillar each. Buy one or the set.</span></div>
+        <ul class="mods">
+          <li><span>1 · Mindset</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%201%3A%20Mindset">Buy</a></li>
+          <li><span>2 · Stress Management</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%202%3A%20Stress%20Management">Buy</a></li>
+          <li><span>3 · Sleep</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%203%3A%20Sleep">Buy</a></li>
+          <li><span>4 · Nutrition</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%204%3A%20Nutrition">Buy</a></li>
+          <li><span>5 · Physical Activity</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%205%3A%20Physical%20Activity">Buy</a></li>
+          <li><span>6 · Relationships</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%206%3A%20Relationships">Buy</a></li>
+          <li><span>7 · Substances</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%207%3A%20Substances">Buy</a></li>
+          <li><span>8 · Putting It All Together</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%208%3A%20Putting%20It%20All%20Together">Buy</a></li>
+        </ul>
+        <a class="btn btn-navy" style="margin-top:16px" href="mailto:gstangel@livebalancefit.com?subject=Grow%20modules%3A%20all%208">Buy all 8</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="about">
+    <div class="wrap bio">
+      <img src="img/beanie-crossed-arms.webp" alt="Garrett's cartoon avatar with arms crossed" loading="lazy">
+      <div>
+        <h2>Meet Garrett.</h2>
+        <p>Garrett Stangel is a Marine Corps veteran who has coached people to better health for nearly 30 years. He owns Balance Fitness in Glendale and co-owns 9Round in Wauwatosa. He has directed corporate wellness for QuadMed, taught exercise science at the university level and mentors trainers nationwide as a subject matter expert for ACE. He has also competed as an Ironman triathlete, powerlifter, bodybuilder and mixed martial artist.</p>
+        <p class="creds">M.S. Health and Wellness Management · National Board Certified Health &amp; Wellness Coach · ACSM Certified Exercise Physiologist · ACE Medical Exercise Specialist · ACLM Lifestyle Medicine Coach · CDC Diabetes Prevention Coach</p>
+        <p class="creds"><a href="https://www.livebalancefit.com/bio">Read Garrett's full bio →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white" id="blog">
+    <div class="wrap">
+      <h2>Read and follow along.</h2>
+      <div class="reads">
+        <div>
+          <h3>From the blog</h3>
+          <ul class="posts">
+            <li><a href="https://www.livebalancefit.com/post/beyond-the-calorie-decoding-your-metabolic-blueprint">Beyond the Calorie: Decoding Your Metabolic Blueprint<span>Nutrition</span></a></li>
+            <li><a href="https://www.livebalancefit.com/post/believe-in-your-best-self-health-lessons-from-ted-lasso">Believe in Your Best Self: Health Lessons from Ted Lasso<span>Mindset</span></a></li>
+            <li><a href="https://www.livebalancefit.com/post/10-lessons-from-100-miles-on-the-appalachian-trail">10 Lessons from 100 Miles on the Appalachian Trail<span>Adventure</span></a></li>
+          </ul>
+          <a class="more" href="https://www.livebalancefit.com/blog">All blog posts →</a>
+        </div>
+        <div>
+          <h3>Latest on social</h3>
+          <iframe class="fb" title="Latest posts from Live Balance Fit on Facebook" loading="lazy" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flivebalancefit%2F&amp;tabs=timeline&amp;width=500&amp;height=520&amp;small_header=true&amp;hide_cover=true&amp;show_facepile=false" allow="encrypted-media"></iframe>
+          <a class="more" href="https://www.facebook.com/livebalancefit/">Follow on Facebook →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="final" id="start">
     <div class="wrap final-grid">
       <div>
-        <h2>Start with a free movement screen.</h2>
-        <p>Twenty minutes, in person or online. You leave with your first three correctives.</p>
+        <h2>Start with a free consultation.</h2>
+        <p>In person or online. We talk about what you want, look at how you move, and you leave with a plan and your first three correctives.</p>
         <div class="ctas">
           <a class="btn btn-gold" href="tel:+14144052855">Call or text (414) 405-2855</a>
-          <a class="btn btn-line" href="mailto:gstangel@livebalancefit.com?subject=Free%20movement%20screen">Email Garrett</a>
+          <a class="btn btn-line" href="mailto:gstangel@livebalancefit.com?subject=Free%20consultation">Email Garrett</a>
         </div>
       </div>
       <img src="img/say-lets-get-after-it.webp" alt="Garrett's avatar saying Let's get after it" loading="lazy">
@@ -210,7 +320,7 @@ footer a:hover{color:var(--navy)}
 <footer>
   <div class="wrap">
     <span>Balance by Garrett · 4170 N Port Washington Rd, Glendale, WI · <a href="tel:+14144052855">(414) 405-2855</a> · <a href="mailto:gstangel@livebalancefit.com">gstangel@livebalancefit.com</a></span>
-    <span><a href="https://www.livebalancefit.com/blog">Blog</a> · <a href="https://www.facebook.com/livebalancefit/">Facebook</a> · Bottomless Bucket returns in 2027</span>
+    <span><a href="#shop">Shop</a> · <a href="#about">About</a> · <a href="https://www.livebalancefit.com/blog">Blog</a> · <a href="https://www.facebook.com/livebalancefit/">Facebook</a> · Bottomless Bucket returns in 2027</span>
   </div>
 </footer>
 </body>
