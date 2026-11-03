@@ -1,6 +1,6 @@
 # Balance by Garrett website
 
-One streamlined page for **balancebygarrett.com** with four ways to feel better:
+One streamlined page for **balancebygarrett.coach** with four ways to feel better:
 
 1. **The Glendale gym:** personal training ($55 / 25 min, $95 / 55 min) and small group ($160 / month, Mon, Wed, Thu at 9 AM).
 2. **Remote health coaching:** Trainerize app, $300 / month.
@@ -19,23 +19,22 @@ It is a plain static site (`index.html`, `img/`, `vercel.json`) with no build st
 
 Every push to `main` redeploys the site.
 
-## Connect balancebygarrett.com
+## Connect balancebygarrett.coach
 
-In the Vercel project, open **Settings → Domains**, add `balancebygarrett.com`, and also add `www.balancebygarrett.com` (Vercel offers to redirect one to the other).
+In the Vercel project, open **Settings → Domains**, add `balancebygarrett.coach`, and also add `www.balancebygarrett.coach` (Vercel offers to redirect one to the other).
 
-- **If you bought the domain through Vercel:** nothing else to do. It connects on its own.
-- **If the domain is at another registrar** (GoDaddy, Google/Squarespace, Namecheap, Wix and so on), add the two records Vercel shows you in that registrar's DNS settings. They usually look like this:
+The domain is registered at **Namecheap**. In Namecheap, go to **Domain List → Manage** next to balancebygarrett.coach, open **Advanced DNS**, delete the default parking records (the CNAME for `www` and the URL Redirect for `@`), and add the two records Vercel shows you. They usually look like this:
 
-| Type | Name | Value |
+| Type | Host | Value |
 |---|---|---|
-| A | `@` | `76.76.21.21` |
-| CNAME | `www` | `cname.vercel-dns.com` |
+| A Record | `@` | `76.76.21.21` |
+| CNAME Record | `www` | `cname.vercel-dns.com.` |
 
 Use the exact values Vercel shows on the Domains page if they differ. DNS can take from a few minutes up to a day; Vercel adds the HTTPS certificate automatically once it sees the records.
 
 ## The QR code
 
-`img/qr-app.svg` and `img/qr-app.png` point to **balancebygarrett.com/app**. Right now that address opens the Bare Min section of this page (see `vercel.json`). When the app is in the App Store, change the `destination` in `vercel.json` to the store link, and every printed QR code starts sending people there without being reprinted.
+`img/qr-app.svg` and `img/qr-app.png` point to **balancebygarrett.coach/app**. Right now that address opens the Bare Min section of this page (see `vercel.json`). When the app is in the App Store, change the `destination` in `vercel.json` to the store link, and every printed QR code starts sending people there without being reprinted.
 
 ## Still to add
 
