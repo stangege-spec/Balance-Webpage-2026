@@ -34,6 +34,5 @@ Google gives at most 5 recent reviews; the site shows the 4 and 5 star ones that
 ## Still to add
 
 - **Logo:** save the Balance by Garrett logo as `img/logo.png` (about 570 × 96). Until then the header uses the logo from the Wix site.
-- **Workbook cover:** `img/workbook-cover.jpg` is a stand-in; replace it with the Amazon cover (2:3, about 600 × 900).
 - **Links** still empty in `js/links.js`: App Store, Google Play, each Grow module's own Gumroad page, YouTube and other socials, and the Google profile.
 - **Booking:** a WellnessLiving booking link for the free consultation (now phone and email).
