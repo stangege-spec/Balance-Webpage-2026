@@ -4,188 +4,310 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Balance by Garrett · Feel better</title>
-<meta name="description" content="Feel better with Garrett Stangel: personal and small group training at our gym in Glendale, WI, remote health coaching, the Bare Min by Garrett app, and corporate wellness for teams.">
+<meta name="description" content="Feel better with Garrett Stangel: personal and small group training at our gym in Glendale, WI, remote health coaching, the Bare Min by Garrett app, the Bare Minimum to Feel Better workbook and the Grow workshops.">
 <link rel="canonical" href="https://balancebygarrett.coach/">
 <meta property="og:title" content="Balance by Garrett · Feel better">
-<meta property="og:description" content="In the gym in Glendale, coached from anywhere, in your pocket with the Bare Min app, and at work with your team.">
+<meta property="og:description" content="In the gym in Glendale, coached from anywhere, and in your pocket with the Bare Min app, workbook and Grow workshops.">
 <meta property="og:url" content="https://balancebygarrett.coach/">
-<meta property="og:image" content="https://balancebygarrett.coach/img/dose.jpg">
+<meta property="og:image" content="https://balancebygarrett.coach/img/workbook-cover.jpg">
 <meta name="theme-color" content="#1b3a5c">
 <link rel="icon" href="img/tank-wave.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
 <style>
-/* Barest-essentials homepage: hero, four ways to feel better, Bare Min in two slides, free consultation CTA, then review and press at the bottom. Light palette from the Bare Min app. */
+/* Balance by Garrett homepage. Bold navy and gold, one color per offer, and each product in its own band so the app, the workbook and the Grow workshops never blur together. Mobile first. */
 :root{
-  --bg:#f6f9fc; --paper:#ffffff; --cream:#fdf8ec; --ink:#141e2b; --muted:#4d5d70; --line:#dde6ef;
-  --navy:#1b3a5c; --gold:#c8a84b; --gold-ink:#7f651c;
+  --bg:#f4f7fb; --paper:#ffffff; --cream:#fdf6e3; --ink:#141e2b; --muted:#4d5d70; --line:#dde6ef;
+  --navy:#1b3a5c; --navy-2:#132b45; --gold:#c8a84b; --gold-soft:#e6cf86; --gold-ink:#7f651c;
   --gym:#2e6da4; --remote:#2e8b84; --app:#c8a84b; --team:#e07b2e;
+  --teal-deep:#155e58;
   --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
   --text:"Nunito Sans","Segoe UI",system-ui,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55}
-img{max-width:100%;display:block}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em}
-h2{font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.05;color:var(--navy)}
+h2{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.02;color:var(--navy)}
 p{margin:0}
 a{color:inherit}
-.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:0;cursor:pointer;font-family:var(--text);transition:transform .15s ease}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:10px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:0;cursor:pointer;font-family:var(--text);transition:transform .15s ease,box-shadow .15s ease;min-height:48px}
 .btn:hover{transform:translateY(-2px)}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.btn-gold{background:var(--gold);color:#141e2b}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--gold);color:#141e2b;box-shadow:0 6px 0 #a4893a}
+.btn-gold:hover{box-shadow:0 8px 0 #a4893a}
 .btn-navy{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
 .btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.btn.soon{opacity:.6;cursor:default;transform:none}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 
-.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
-.logo{display:flex;align-items:center;text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;color:var(--navy)}
-.logo img{height:40px;width:auto;max-width:220px}
+/* Header */
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{display:flex;align-items:center;text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;color:var(--navy);min-width:0}
+.logo img{height:38px;width:auto;max-width:200px}
 .logo small{font-family:var(--text);font-weight:600;font-size:13px;color:var(--muted);margin-left:6px}
-.nav .btn{padding:10px 18px;font-size:15px;white-space:nowrap}
+.nav .btn{padding:10px 18px;font-size:15px;white-space:nowrap;min-height:44px;box-shadow:none}
+.nav-links{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px;margin-left:auto;margin-right:6px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--navy)}
+/* Mobile jump bar: the products, one tap away */
+.jump{display:none;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 0 10px}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none;font-weight:800;font-size:14px;padding:7px 14px;border-radius:999px;background:var(--bg);color:var(--navy);border:1px solid var(--line)}
 
-.hero{background:radial-gradient(90% 120% at 100% 0%,#fff3d1 0,var(--cream) 35%,var(--bg) 80%);padding-block:64px 56px}
-.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:30px;align-items:center}
-.hero h1{font-size:clamp(60px,10vw,120px);font-weight:800;line-height:.92;letter-spacing:-.045em;color:var(--navy)}
+/* Hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(80% 90% at 85% 10%,#2c5a87 0,var(--navy) 45%,var(--navy-2) 100%);color:#fff;padding-block:64px 70px}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,75,.35),transparent 65%)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.hero .eyebrow{color:var(--gold-soft)}
+.hero h1{font-size:clamp(64px,11vw,128px);font-weight:800;line-height:.9;letter-spacing:-.05em}
 .hero h1 em{font-style:normal;color:var(--gold)}
-.hero .lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:30em;margin-top:22px}
-.hero-art{justify-self:center}
-.hero-art img{width:min(260px,60vw);filter:drop-shadow(0 16px 24px rgba(27,58,92,.18))}
+.hero .lede{font-size:clamp(18px,2vw,21px);color:#cfe0ee;max-width:30em;margin-top:22px}
+.hero-art{justify-self:center;grid-column:2;grid-row:1/span 3}
+.hero-grid>div:first-child,.hero .lede,.hero .ctas{grid-column:1}
+.hero-art img{width:min(270px,100%);filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
+.hero .btn-line{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
 
-.band{padding-block:64px}
+.band{padding-block:72px}
 .band.white{background:var(--paper)}
-.band h2{margin-bottom:28px}
+.band h2{margin-bottom:12px}
+.band .intro{color:var(--muted);font-size:18px;max-width:36em;margin-bottom:30px}
 
-.philosophy{max-width:760px;margin:0 0 48px;padding-left:20px;border-left:4px solid var(--gold)}
-.philosophy .eyebrow{display:block;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:8px}
-.philosophy p{font-size:clamp(18px,2vw,20px);line-height:1.6}
+/* Approach + ways */
+.philosophy{max-width:780px;margin:0 0 56px;padding:24px 24px 24px 26px;border-radius:20px;background:var(--cream);border-left:6px solid var(--gold)}
+.philosophy p{font-size:clamp(17px,2vw,20px);line-height:1.6}
 .philosophy .sig{display:block;margin-top:10px;font-family:var(--display);font-weight:800;color:var(--navy)}
 .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.way{display:flex;flex-direction:column;gap:8px;background:var(--paper);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:20px;padding:22px 20px;min-width:0}
-.band.white .way{background:var(--bg)}
-.way h3{font-size:21px;line-height:1.15}
-.way p{color:var(--muted);font-size:15px;flex:1}
-.way .price{font-family:var(--display);font-weight:800;font-size:19px;color:var(--navy);font-variant-numeric:tabular-nums}
-.way .price small{font-family:var(--text);font-weight:600;font-size:13px;color:var(--muted)}
+.way{position:relative;display:flex;flex-direction:column;gap:8px;border-radius:22px;padding:22px 20px 20px;min-width:0;color:#fff;background:var(--c);overflow:hidden;text-decoration:none}
+.way::after{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)}
+.way .n{font-family:var(--display);font-weight:800;font-size:14px;opacity:.75;letter-spacing:.08em}
+.way h3{font-size:23px;line-height:1.1}
+.way p{color:rgba(255,255,255,.9);font-size:15px;flex:1}
+.way .price{font-family:var(--display);font-weight:800;font-size:19px;font-variant-numeric:tabular-nums}
+.way .price small{font-family:var(--text);font-weight:600;font-size:13px;opacity:.85}
+.way.gold{color:#141e2b}
+.way.gold p{color:#3d3215}
+.way .go{font-weight:800;font-size:14px;margin-top:4px}
 
-.bm{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+/* Shop intro */
+.shop-head{background:var(--paper);padding-block:64px 36px;text-align:center}
+.shop-head .intro{margin:12px auto 0}
+.shop-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.shop-tabs a{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;padding:8px 16px 8px 8px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--navy)}
+.shop-tabs a i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;font-style:normal;font-size:13px;color:#fff;background:var(--c)}
+
+/* Product bands */
+.product{padding-block:72px;position:relative;overflow:hidden}
+.product .tag{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.product .tag i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;font-style:normal;letter-spacing:0;font-size:14px}
+.product .price{font-family:var(--display);font-weight:800;font-size:20px;margin-top:16px}
+.product .price small{font-family:var(--text);font-weight:600;font-size:14px;opacity:.8}
+.p-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.keys{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;font-size:18px}
+.keys li{display:flex;gap:12px;align-items:baseline}
+.keys li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--dot,var(--gold));transform:translateY(-1px)}
+
+/* 1. App */
+.p-app{background:linear-gradient(180deg,var(--cream),#fbeec4)}
+.p-app .tag{color:var(--gold-ink)}
+.p-app .tag i{background:var(--gold);color:#141e2b}
 .bm-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .bm-brand img{width:48px;height:48px;border-radius:12px}
 .bm-brand span{font-weight:800;letter-spacing:.18em;font-size:14px;color:var(--navy)}
 .bm-brand em{font-family:Georgia,serif;font-style:italic;color:var(--gold-ink);letter-spacing:0;font-weight:400;font-size:16px}
-.keys{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px;font-size:18px}
-.keys li{display:flex;gap:12px;align-items:baseline}
-.keys li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
-.qr{display:flex;align-items:center;gap:14px;margin-top:26px}
-.qr img{width:88px;height:88px;border-radius:10px;background:#fff;padding:6px;border:1px solid var(--line)}
+.phone-wrap{position:relative;display:flex;justify-content:center}
+.phone{position:relative;width:min(300px,78vw);border-radius:44px;padding:12px;background:#0f1a27;box-shadow:0 30px 60px rgba(27,58,92,.3),inset 0 0 0 2px #2b3a4d}
+.phone img{border-radius:34px;width:100%;aspect-ratio:1170/1992;object-fit:cover}
+.phone-wrap .sticker{position:absolute;left:-10px;bottom:-14px;width:120px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.2))}
+.phone-cap{text-align:center;color:var(--muted);font-size:14px;margin-top:16px}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.qr{display:flex;align-items:center;gap:14px;margin-top:22px}
+.qr img{width:84px;height:84px;border-radius:10px;background:#fff;padding:6px;border:1px solid var(--line)}
 .qr span{font-size:14px;color:var(--muted)}
 .qr b{display:block;color:var(--ink);font-size:16px}
-.slides{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.slides img{border-radius:16px;box-shadow:0 16px 34px rgba(27,58,92,.16);aspect-ratio:4/5;object-fit:cover;width:100%}
 
-.final{background:var(--navy);color:#fff;padding-block:64px}
-.final-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-.final h2{color:#fff}
-.final p{color:#c9dbeb;font-size:18px;margin-top:12px;max-width:34em}
-.final .btn-line{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
-.final img{width:190px}
+/* 2. Workbook */
+.p-book{background:radial-gradient(70% 80% at 20% 40%,#2c5a87 0,var(--navy) 55%,var(--navy-2) 100%);color:#fff}
+.p-book h2{color:#fff}
+.p-book .tag{color:var(--gold-soft)}
+.p-book .tag i{background:var(--gold);color:#141e2b}
+.p-book p.lead{color:#cfe0ee;font-size:18px;margin-top:14px;max-width:32em}
+.p-book .keys{--dot:var(--gold)}
+.book{justify-self:center;perspective:1200px}
+.book img{width:min(320px,70vw);border-radius:4px 12px 12px 4px;box-shadow:-10px 0 0 -4px #0d1f33,0 34px 60px rgba(0,0,0,.45);transform:rotateY(-14deg) rotate(-2deg)}
+.book-meta{font-size:14px;color:#9fbad3;margin-top:10px}
 
-.proof{padding-block:48px;border-bottom:1px solid var(--line);background:var(--paper)}
-.proof-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.review q{display:block;font-family:var(--display);font-size:22px;font-weight:700;line-height:1.3;color:var(--navy);quotes:"\201C" "\201D"}
-.review .stars{color:var(--gold);letter-spacing:2px}
-.review figcaption{margin-top:10px;font-weight:800;font-size:14px}
-.review figcaption span{font-weight:600;color:var(--muted)}
-.press .lbl{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:10px}
-.press ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--display);font-weight:800;font-size:17px;color:var(--navy)}
-.press .creds{margin-top:14px;font-size:13.5px;color:var(--muted)}
+/* 3. Grow workshops */
+.p-grow{background:linear-gradient(180deg,var(--remote),var(--teal-deep));color:#fff}
+.p-grow h2{color:#fff}
+.p-grow .tag{color:#bfeee8}
+.p-grow .tag i{background:#fff;color:var(--teal-deep)}
+.grow-top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:30px}
+.grow-top p{color:#d8f3ef;font-size:18px;max-width:34em;margin-top:12px}
+.weeks{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.weeks span{font-size:13.5px;font-weight:800;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14)}
+.mods{list-style:none;margin:0;padding:0 0 8px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.mod{display:flex;flex-direction:column;background:#fff;color:var(--ink);border-radius:18px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.18);min-width:0}
+.mod img{width:100%;aspect-ratio:360/466;object-fit:cover;background:#e8eef5}
+.mod div{display:flex;flex-direction:column;gap:10px;padding:14px;flex:1}
+.mod h3{font-size:18px;line-height:1.15;flex:1}
+.mod h3 small{display:block;font-family:var(--text);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--remote);margin-bottom:2px}
+.mod .btn{padding:10px 16px;font-size:15px;min-height:44px;width:100%}
+.bundle{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
+.bundle b{font-family:var(--display);font-size:22px}
+.bundle p{color:#d8f3ef;font-size:15px}
+.swipe-hint{display:none;font-size:13.5px;color:#bfeee8;margin-top:6px}
 
-footer{padding-block:28px;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
-footer a{text-decoration:none}
-footer a:hover{color:var(--navy)}
-
-.nav-links{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px;margin-left:auto;margin-right:6px}
-.nav-links a{text-decoration:none;color:var(--muted)}
-.nav-links a:hover{color:var(--navy)}
-
-.buy{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.item{display:flex;flex-direction:column;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;min-width:0}
-.item h3{font-size:22px}
-.item p{color:var(--muted);font-size:15.5px;flex:1}
-.item .price{font-family:var(--display);font-weight:800;font-size:19px;color:var(--navy)}
-.item .price small{font-family:var(--text);font-weight:600;font-size:13px;color:var(--muted)}
-.item .btn{align-self:flex-start;margin-top:6px}
-.stores{display:flex;flex-wrap:wrap;gap:10px}
-.grow{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px}
-.grow-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px;margin-bottom:14px}
-.grow-head h3{font-size:22px}
-.grow-head span{color:var(--muted);font-size:15px}
-.mods{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
-.mods li{display:flex;align-items:center;gap:12px;padding-block:10px;border-top:1px solid var(--line);font-weight:700;font-size:15.5px;min-width:0}
-.mods li span{flex:1;min-width:0}
-.mods a{font-size:14px;font-weight:800;color:var(--gold-ink);text-decoration:none;white-space:nowrap}
-.mods a:hover{text-decoration:underline}
-
-.bio{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
-.bio img{width:200px}
+/* About */
+.bio{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
+.bio img{width:210px}
 .bio p{color:var(--muted);font-size:17px;margin-top:14px;max-width:40em}
 .bio .creds{font-size:14px;margin-top:16px}
 .bio a{font-weight:800;color:var(--gold-ink)}
 
-.reads{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
-.reads h3{font-size:20px;margin-bottom:12px;color:var(--navy)}
-.posts{list-style:none;margin:0;padding:0}
-.posts li{border-top:1px solid var(--line)}
-.posts a{display:block;padding-block:12px;text-decoration:none;font-weight:700;font-size:17px}
-.posts a span{display:block;font-weight:600;font-size:13px;color:var(--muted)}
-.posts a:hover{color:var(--navy)}
-.more{display:inline-block;margin-top:12px;font-weight:800;color:var(--gold-ink);text-decoration:none}
-.fb{width:100%;max-width:500px;height:520px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+/* Reviews */
+.rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:26px}
+.rating{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--muted)}
+.rating b{font-family:var(--display);font-size:34px;color:var(--navy)}
+.rating .stars{color:var(--gold);font-size:20px;letter-spacing:2px}
+.rv-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rv{margin:0;display:flex;flex-direction:column;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px;min-width:0}
+.band.white .rv{background:var(--bg)}
+.rv .stars{color:var(--gold);letter-spacing:2px}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:8;-webkit-box-orient:vertical;overflow:hidden}
+.rv figcaption{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px}
+.rv figcaption img{width:32px;height:32px;border-radius:50%}
+.rv figcaption small{font-weight:600;color:var(--muted)}
 
-@media (max-width:900px){
+/* Blog */
+.posts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.post{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;min-width:0;transition:transform .15s ease}
+.post:hover{transform:translateY(-3px)}
+.post img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--cream)}
+.post-body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 20px}
+.post-date{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
+.post-title{font-family:var(--display);font-weight:800;font-size:19px;line-height:1.15;color:var(--navy)}
+.post-sum{font-size:14.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.more{display:inline-block;margin-top:18px;font-weight:800;color:var(--gold-ink);text-decoration:none}
+
+/* Social */
+.social{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.social a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:#fff;background:var(--s);padding:12px 20px 12px 14px;border-radius:999px;min-height:48px}
+.social svg{width:22px;height:22px;flex:none}
+
+/* Final CTA */
+.final{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--gold) 0,#d9bc63 100%);color:#141e2b;padding-block:72px}
+.final-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.final h2{color:var(--navy)}
+.final p{color:#3d3215;font-size:18px;margin-top:12px;max-width:34em}
+.final .btn-navy{box-shadow:0 6px 0 #0d1f33}
+.final img{width:200px}
+
+/* Press + footer */
+.press{padding-block:40px;background:var(--paper);border-bottom:1px solid var(--line)}
+.press .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 30px}
+.press .lbl{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.press ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--display);font-weight:800;font-size:18px;color:var(--navy)}
+.press .creds{width:100%;font-size:13.5px;color:var(--muted)}
+footer{padding-block:28px 40px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--navy)}
+
+@media (max-width:980px){
   .ways{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .bm,.proof-grid,.reads{grid-template-columns:1fr}
+  .mods{grid-template-columns:repeat(4,minmax(200px,1fr))}
+  .posts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav-links{display:none}
+  .jump{display:flex}
+  html{scroll-padding-top:110px}
 }
-@media (max-width:640px){
-  .hero-grid,.final-grid{grid-template-columns:1fr}
-  .hero-art{display:none}
-  .hero{padding-block:44px 40px}
-  .ways,.buy,.mods{grid-template-columns:1fr}
-  .bio{grid-template-columns:1fr}
-  .bio img{width:140px}
-  .final img{width:140px}
+@media (max-width:760px){
+  .band,.product{padding-block:56px}
+  .hero{padding-block:40px 48px}
+  .hero-grid{grid-template-columns:1fr 112px;gap:8px;align-items:end}
+  .hero-art{grid-row:1}
+  .hero-art img{width:112px}
+  .hero h1{font-size:clamp(58px,17vw,84px)}
+  .hero .ctas{grid-column:1/-1}
+  .hero .ctas .btn{flex:1 1 100%}
+  .hero .lede{grid-column:1/-1}
+  .p-grid,.bio,.final-grid{grid-template-columns:1fr;gap:36px}
+  .p-app .phone-wrap{order:-1}
+  .p-book .book{order:-1}
+  .ways{grid-template-columns:1fr 1fr;gap:10px}
+  .way{padding:18px 16px 16px;border-radius:18px}
+  .way h3{font-size:19px}
+  .way p{font-size:14px}
+  .way .price{font-size:16px}
+  /* swipeable rows on phones */
+  .mods,.rv-list,.posts{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-18px;padding-inline:18px;scroll-padding-inline:18px;scrollbar-width:none;padding-bottom:10px}
+  .mods::-webkit-scrollbar,.rv-list::-webkit-scrollbar,.posts::-webkit-scrollbar{display:none}
+  .mod{flex:0 0 62%;scroll-snap-align:start}
+  .rv{flex:0 0 84%;scroll-snap-align:start}
+  .post{flex:0 0 78%;scroll-snap-align:start}
+  .swipe-hint{display:block}
+  .stores .btn,.p-book .btn-gold{flex:1 1 100%}
+  .qr{display:none}
+  .bio img{width:150px}
+  .final img{width:150px;justify-self:end;margin-top:-20px}
+  .bundle .btn{width:100%}
+  .social a{flex:1 1 calc(50% - 6px);justify-content:center}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:380px){
+  .ways{grid-template-columns:1fr}
+  .logo img{height:32px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.2-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.8-1-2.8-4.2zM14 5.3c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M4.3 2.4c-.3.3-.4.7-.4 1.3v16.6c0 .6.1 1 .4 1.3l9.3-9.6-9.3-9.6zm10.4 8.5 2.9-3L5.9 1.3c-.4-.2-.7-.3-1-.2l9.8 9.8zm0 2.2-9.8 9.8c.3.1.6 0 1-.2l11.7-6.6-2.9-3zm6-4.1-2.3-1.3-3.1 3.2 3.1 3.2 2.3-1.3c.9-.5.9-1.4 0-1.8z"/></symbol>
+  <symbol id="i-amazon" viewBox="0 0 24 24"><path fill="currentColor" d="M14.6 8.4c-1.7.1-5.2.4-5.2 3.4 0 1.9 1.3 2.9 2.8 2.9 1.3 0 2.2-.5 3-1.4.3.5.4.7 1 1.2.1.1.3.1.4 0l1.4-1.2c.1-.1.1-.3 0-.5-.3-.5-.6-.8-.6-1.6V8.3c0-1.1.1-2.2-.8-3-.7-.7-1.9-.9-2.8-.9-1.8 0-3.7.6-4.1 2.8 0 .2.1.4.3.4l1.8.2c.2 0 .3-.2.3-.3.2-.8.8-1.1 1.5-1.1.4 0 .8.1 1 .4.3.4.3.9.3 1.3v.3zm0 2.1c0 .7 0 1.2-.3 1.8-.3.5-.7.8-1.2.8-.7 0-1.1-.5-1.1-1.3 0-1.5 1.4-1.8 2.6-1.8v.5zM20.4 17.8c-2.3 1.7-5.6 2.6-8.5 2.6-4 0-7.6-1.5-10.4-3.9-.2-.2 0-.5.2-.3 3 1.8 6.7 2.8 10.6 2.8 2.6 0 5.4-.5 8-1.6.4-.2.7.2.1.4zm.9-1c-.3-.4-2-.2-2.7-.1-.2 0-.3-.2-.1-.3 1.4-1 3.6-.7 3.9-.4.3.3-.1 2.6-1.4 3.6-.2.2-.4.1-.3-.1.3-.7.9-2.3.6-2.7z"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3h-3.2v12.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.3a6 6 0 1 0 5.1 5.9V9.1a7.6 7.6 0 0 0 4.4 1.4V7.3c-2.4 0-4.4-1.9-4.4-4.3z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.3 9h3.4v11H3.3V9zm5.6 0h3.3v1.5h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3v6h-3.4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V20H8.9V9z"/></symbol>
+  <symbol id="i-g" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22zM6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2L6.4 14zM12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10c.8-2.3 3-4.1 5.6-4.1z"/></symbol>
+</svg>
+
 <header class="top">
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Balance by Garrett home"><img src="img/logo.png" alt="Balance by Garrett" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://static.wixstatic.com/media/b46f1b_b5e03ea472f54ab3ad414bae23992d7f~mv2.png/v1/fill/w_570,h_96,al_c,q_85/logo.png'}else{this.hidden=true;this.nextElementSibling.hidden=false}"><span hidden>Balance <small>by Garrett</small></span></a>
-    <nav class="nav-links" aria-label="Main"><a href="#shop">Shop</a><a href="#about">About</a><a href="#blog">Blog</a></nav>
+    <nav class="nav-links" aria-label="Main"><a href="#ways">Train</a><a href="#app">App</a><a href="#workbook">Workbook</a><a href="#grow">Workshops</a><a href="#reviews-sec">Reviews</a><a href="#blog">Blog</a></nav>
     <a class="btn btn-gold" href="#start">Free consultation</a>
   </div>
+  <nav class="wrap jump" aria-label="Jump to">
+    <a href="#ways">Train</a><a href="#app">App</a><a href="#workbook">Workbook</a><a href="#grow">Workshops</a><a href="#reviews-sec">Reviews</a><a href="#blog">Blog</a><a href="#about">About</a>
+  </nav>
 </header>
 
 <main id="top">
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
+        <span class="eyebrow">Balance by Garrett · Glendale, WI</span>
         <h1>Feel <em>better.</em></h1>
-        <p class="lede">Safe, science-based exercise and small daily habits that stick. In Glendale, from anywhere, or at work.</p>
-        <div class="ctas">
-          <a class="btn btn-navy" href="#start">Book a free consultation</a>
-          <a class="btn btn-line" href="#app">Get the free app</a>
-        </div>
       </div>
-      <div class="hero-art"><img src="img/tank-wave.webp" alt="Garrett's cartoon avatar waving hello" width="254" height="440"></div>
+      <div class="hero-art"><img src="img/tank-wave.webp" alt="Garrett's cartoon avatar waving hello" width="255" height="440"></div>
+      <p class="lede">Safe, science-based exercise and small daily habits that stick. In the gym, from anywhere, or right on your phone.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#start">Book a free consultation</a>
+        <a class="btn btn-line" href="#shop">Shop Bare Min</a>
+      </div>
     </div>
   </section>
 
@@ -197,101 +319,157 @@ footer a:hover{color:var(--navy)}
         <span class="sig">Garrett</span>
       </div>
       <h2>Four ways to feel better.</h2>
+      <p class="intro">Pick the one that fits your life. Every path starts with a free consultation.</p>
       <div class="ways">
-        <div class="way" style="--c:var(--gym)"><h3>Train at the gym</h3><p>Personal training or a small group of six, in Glendale.</p><span class="price">$55 <small>/ 25 min</small> · $95 <small>/ 55 min</small></span><span class="price">$160 <small>/ month small group</small></span></div>
-        <div class="way" style="--c:var(--remote)"><h3>Remote coaching</h3><p>Your plan in the Trainerize app, with Garrett checking in.</p><span class="price">$300 <small>/ month</small></span></div>
-        <div class="way" style="--c:var(--app)"><h3>Bare Min app</h3><p>Three tiny actions a day for Mind, Body and Spirit.</p><span class="price">Free <small>to start</small></span></div>
-        <div class="way" style="--c:var(--team)"><h3>Your team</h3><p>A 30-day team challenge with coaching and a results report.</p><span class="price">Free <small>30-day pilot</small></span></div>
+        <a class="way" href="#start" style="--c:var(--gym)"><span class="n">01</span><h3>Train at the gym</h3><p>Personal training or a small group of six, in Glendale. Small group meets Mon, Wed, Thu at 9 AM.</p><span class="price">$55 <small>/ 25 min</small> · $95 <small>/ 55 min</small></span><span class="price">$160 <small>/ month small group</small></span></a>
+        <a class="way" href="#start" style="--c:var(--remote)"><span class="n">02</span><h3>Remote coaching</h3><p>Your plan in the Trainerize app, with Garrett checking in.</p><span class="price">$300 <small>/ month</small></span></a>
+        <a class="way gold" href="#app" style="--c:var(--app)"><span class="n">03</span><h3>Bare Min app, workbook and workshops</h3><p>Do-it-yourself tools for every day.</p><span class="go">See the shop ↓</span></a>
+        <a class="way" href="#start" style="--c:var(--team)"><span class="n">04</span><h3>Your team</h3><p>A 30-day team challenge with coaching and a results report.</p><span class="price">Free <small>30-day pilot</small></span></a>
       </div>
     </div>
   </section>
 
-  <section class="band" id="app">
-    <div class="wrap bm">
+  <div class="shop-head" id="shop">
+    <div class="wrap">
+      <span class="eyebrow">Shop Bare Min by Garrett</span>
+      <h2>Three tools. Pick your pace.</h2>
+      <p class="intro">An app for every day, a workbook to find your goal, and 4-week workshops to go deeper on one pillar at a time.</p>
+      <div class="shop-tabs">
+        <a href="#app" style="--c:var(--gold)"><i>1</i>The app</a>
+        <a href="#workbook" style="--c:var(--navy)"><i>2</i>The workbook</a>
+        <a href="#grow" style="--c:var(--remote)"><i>3</i>Grow workshops</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. App -->
+  <section class="product p-app" id="app">
+    <div class="wrap p-grid">
       <div>
+        <span class="tag"><i>1</i>The app</span>
         <div class="bm-brand"><img src="img/app-icon.png" alt="" width="48" height="48"><span>BARE MIN <em>by Garrett</em></span></div>
         <h2>The bare minimum, every day.</h2>
         <ul class="keys">
-          <li>Three tiny actions a day, two minutes each</li>
-          <li>See where you stand with your health battery</li>
-          <li>Free to start</li>
+          <li>Three tiny actions a day for Mind, Body and Spirit</li>
+          <li>Two minutes each. Do any one to keep your streak</li>
+          <li>Correctives for aches and tight spots, plus your health battery</li>
         </ul>
+        <p class="price">Free <small>· Balance Plus $12.99 / mo or $69.99 / yr</small></p>
+        <div class="stores">
+          <a class="btn btn-navy" data-link="appStore" href="/app"><svg aria-hidden="true"><use href="#i-apple"/></svg><span class="label">App Store</span></a>
+          <a class="btn btn-navy" data-link="googlePlay" href="/app"><svg aria-hidden="true"><use href="#i-play"/></svg><span class="label">Google Play</span></a>
+        </div>
         <div class="qr">
-          <img src="img/qr-app.svg" alt="QR code for the Bare Min by Garrett app" width="88" height="88">
+          <img src="img/qr-app.svg" alt="QR code for the Bare Min by Garrett app" width="84" height="84">
           <span><b>Scan to get the app</b>or visit balancebygarrett.coach/app</span>
         </div>
       </div>
-      <div class="slides">
-        <img src="img/dose.jpg" alt="Daily dose: three tiny actions, two minutes each" loading="lazy">
-        <img src="img/battery.jpg" alt="Health battery: how charged are you?" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <section class="band white" id="shop">
-    <div class="wrap">
-      <h2>Shop Bare Min.</h2>
-      <div class="buy">
-        <div class="item">
-          <h3>Bare Min by Garrett app</h3>
-          <p>The daily dose, correctives, health battery and streaks. Start free, upgrade to Balance Plus in the app.</p>
-          <span class="price">Free · Balance Plus $12.99 <small>/ mo or $69.99 / yr</small></span>
-          <div class="stores"><a class="btn btn-navy" href="/app">App Store</a><a class="btn btn-navy" href="/app">Google Play</a></div>
-        </div>
-        <div class="item">
-          <h3>Bare Minimum to Feel Better workbook</h3>
-          <p>Find your "ready for anything" goal, run your first experiments and write your personal health manifesto.</p>
-          <span class="price">Sold on Amazon</span>
-          <a class="btn btn-navy" href="mailto:gstangel@livebalancefit.com?subject=Bare%20Minimum%20to%20Feel%20Better%20workbook">Buy on Amazon</a>
-        </div>
-      </div>
-      <div class="grow" id="grow">
-        <div class="grow-head"><h3>Bare Min Grow modules</h3><span>Eight 4-week modules, one pillar each. Buy one or the set.</span></div>
-        <ul class="mods">
-          <li><span>1 · Mindset</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%201%3A%20Mindset">Buy</a></li>
-          <li><span>2 · Stress Management</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%202%3A%20Stress%20Management">Buy</a></li>
-          <li><span>3 · Sleep</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%203%3A%20Sleep">Buy</a></li>
-          <li><span>4 · Nutrition</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%204%3A%20Nutrition">Buy</a></li>
-          <li><span>5 · Physical Activity</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%205%3A%20Physical%20Activity">Buy</a></li>
-          <li><span>6 · Relationships</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%206%3A%20Relationships">Buy</a></li>
-          <li><span>7 · Substances</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%207%3A%20Substances">Buy</a></li>
-          <li><span>8 · Putting It All Together</span><a href="mailto:gstangel@livebalancefit.com?subject=Grow%20module%208%3A%20Putting%20It%20All%20Together">Buy</a></li>
-        </ul>
-        <a class="btn btn-navy" style="margin-top:16px" href="mailto:gstangel@livebalancefit.com?subject=Grow%20modules%3A%20all%208">Buy all 8</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="about">
-    <div class="wrap bio">
-      <img src="img/beanie-crossed-arms.webp" alt="Garrett's cartoon avatar with arms crossed" loading="lazy">
       <div>
+        <div class="phone-wrap">
+          <div class="phone"><img src="img/app-today.jpg" alt="The Bare Min app's Today screen: a one-day streak ring and today's Mind, Body and Spirit actions" width="600" height="1021" loading="lazy"></div>
+          <img class="sticker" src="img/hoodie-power-walk.webp" alt="" loading="lazy">
+        </div>
+        <p class="phone-cap">A sample day: tap each action when it's done.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Workbook -->
+  <section class="product p-book" id="workbook">
+    <div class="wrap p-grid">
+      <div class="book"><img src="img/workbook-cover.jpg" alt="Cover of The Bare Minimum to Be Healthy workbook by Garrett Stangel" width="600" height="900" loading="lazy"></div>
+      <div>
+        <span class="tag"><i>2</i>The workbook</span>
+        <h2>The Bare Minimum to Be Healthy.</h2>
+        <p class="lead">Your health adventure on paper. Check your battery, find the goal that matters to you, and build your plan one small experiment at a time.</p>
+        <ul class="keys">
+          <li>Find your "Ready for Anything" goal</li>
+          <li>Run your first experiments, then keep, tweak or discard</li>
+          <li>Write your personal health manifesto</li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-gold" data-link="amazon" href="#workbook"><svg aria-hidden="true"><use href="#i-amazon"/></svg><span class="label">Buy on Amazon</span></a>
+        </div>
+        <p class="book-meta">Paperback, sold and shipped by Amazon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Grow workshops -->
+  <section class="product p-grow" id="grow">
+    <div class="wrap">
+      <div class="grow-top">
+        <div>
+          <span class="tag"><i>3</i>Grow workshops</span>
+          <h2>Go deeper, 4 weeks at a time.</h2>
+          <p>Eight self-paced workshops, one pillar each. Every week has a Bare Minimum, Build and All In path, so you choose how far to go. Instant download after checkout.</p>
+          <div class="weeks"><span>4 weeks each</span><span>3 paths a week</span><span>Printable PDF</span></div>
+        </div>
+      </div>
+      <ul class="mods">
+        <li class="mod"><img src="img/grow/module-1.webp" alt="Grow Module 1: Mindset cover" width="360" height="466" loading="lazy"><div><h3><small>Module 1</small>Mindset</h3><a class="btn btn-navy" data-link="grow1" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-2.webp" alt="Grow Module 2: Stress Management cover" width="360" height="466" loading="lazy"><div><h3><small>Module 2</small>Stress Management</h3><a class="btn btn-navy" data-link="grow2" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-3.webp" alt="Grow Module 3: Sleep cover" width="360" height="466" loading="lazy"><div><h3><small>Module 3</small>Sleep</h3><a class="btn btn-navy" data-link="grow3" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-4.webp" alt="Grow Module 4: Nutrition cover" width="360" height="466" loading="lazy"><div><h3><small>Module 4</small>Nutrition</h3><a class="btn btn-navy" data-link="grow4" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-5.webp" alt="Grow Module 5: Physical Activity cover" width="360" height="466" loading="lazy"><div><h3><small>Module 5</small>Physical Activity</h3><a class="btn btn-navy" data-link="grow5" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-6.webp" alt="Grow Module 6: Relationships cover" width="360" height="466" loading="lazy"><div><h3><small>Module 6</small>Relationships</h3><a class="btn btn-navy" data-link="grow6" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-7.webp" alt="Grow Module 7: Substances cover" width="360" height="466" loading="lazy"><div><h3><small>Module 7</small>Substances</h3><a class="btn btn-navy" data-link="grow7" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+        <li class="mod"><img src="img/grow/module-8.webp" alt="Grow Module 8: Putting It All Together cover" width="360" height="466" loading="lazy"><div><h3><small>Module 8</small>Putting It All Together</h3><a class="btn btn-navy" data-link="grow8" href="#grow"><span class="label">Buy on Gumroad</span></a></div></li>
+      </ul>
+      <p class="swipe-hint">Swipe to see all eight →</p>
+      <div class="bundle">
+        <div><b>All 8 workshops</b><p>The whole Grow series in one bundle, all eight pillars.</p></div>
+        <a class="btn btn-white" data-link="growAll" href="#grow"><span class="label">Get all 8 on Gumroad</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white" id="reviews-sec">
+    <div class="wrap">
+      <div class="rev-head">
+        <div><span class="eyebrow">Reviews</span><h2>What clients say.</h2></div>
+        <div class="rating" id="rating" hidden><b>5.0</b><span class="stars" aria-hidden="true">★★★★★</span><span class="n">on Google</span></div>
+      </div>
+      <div class="rv-list" id="reviews">
+        <figure class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>Trainers are always friendly, cheerful and focused on you. I know my workout has been created with my specific strengths, weaknesses and needs in mind.</blockquote><figcaption><span>Sandy Grady <small>· Balance Fitness client</small></span></figcaption></figure>
+      </div>
+      <a class="more" data-link="google" data-missing="hide" href="#">Read all reviews on Google →</a>
+    </div>
+  </section>
+
+  <section class="band" id="blog">
+    <div class="wrap">
+      <span class="eyebrow">From the blog</span>
+      <h2>Read and follow along.</h2>
+      <p class="intro">New posts from livebalancefit.com show up here on their own.</p>
+      <div class="posts" id="posts">
+        <a class="post" href="https://www.livebalancefit.com/post/the-bare-min-imum-why-doing-less-might-be-your-biggest-leap-forward"><span class="post-body"><span class="post-title">The Bare Min(imum): Why Doing Less Might Be Your Biggest Leap Forward</span></span></a>
+        <a class="post" href="https://www.livebalancefit.com/post/beyond-the-calorie-decoding-your-metabolic-blueprint"><span class="post-body"><span class="post-title">Beyond the Calorie: Decoding Your Metabolic Blueprint</span></span></a>
+        <a class="post" href="https://www.livebalancefit.com/post/believe-in-your-best-self-health-lessons-from-ted-lasso"><span class="post-body"><span class="post-title">Believe in Your Best Self: Health Lessons from Ted Lasso</span></span></a>
+      </div>
+      <a class="more" href="https://www.livebalancefit.com/blog">All blog posts →</a>
+
+      <h3 style="font-size:22px;color:var(--navy);margin-top:44px;margin-bottom:12px">Follow Garrett</h3>
+      <div class="social">
+        <a data-link="instagram" data-missing="hide" href="#" style="--s:#d6249f"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+        <a data-link="facebook" data-missing="hide" href="#" style="--s:#1877f2"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+        <a data-link="youtube" data-missing="hide" href="#" style="--s:#e62117"><svg aria-hidden="true"><use href="#i-yt"/></svg>YouTube</a>
+        <a data-link="tiktok" data-missing="hide" href="#" style="--s:#111"><svg aria-hidden="true"><use href="#i-tt"/></svg>TikTok</a>
+        <a data-link="linkedin" data-missing="hide" href="#" style="--s:#0a66c2"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+        <a data-link="google" data-missing="hide" href="#" style="--s:#4d5d70"><svg aria-hidden="true"><use href="#i-g"/></svg>Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white" id="about">
+    <div class="wrap bio">
+      <img src="img/beanie-crossed-arms.webp" alt="Garrett's cartoon avatar with arms crossed" loading="lazy" width="177" height="440">
+      <div>
+        <span class="eyebrow">About</span>
         <h2>Meet Garrett.</h2>
         <p>Garrett Stangel is a Marine Corps veteran who has coached people to better health for nearly 30 years. He owns Balance Fitness in Glendale and co-owns 9Round in Wauwatosa. He has directed corporate wellness for QuadMed, taught exercise science at the university level and mentors trainers nationwide as a subject matter expert for ACE. He has also competed as an Ironman triathlete, powerlifter, bodybuilder and mixed martial artist.</p>
         <p class="creds">M.S. Health and Wellness Management · National Board Certified Health &amp; Wellness Coach · ACSM Certified Exercise Physiologist · ACE Medical Exercise Specialist · ACLM Lifestyle Medicine Coach · CDC Diabetes Prevention Coach</p>
         <p class="creds"><a href="https://www.livebalancefit.com/bio">Read Garrett's full bio →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="band white" id="blog">
-    <div class="wrap">
-      <h2>Read and follow along.</h2>
-      <div class="reads">
-        <div>
-          <h3>From the blog</h3>
-          <ul class="posts">
-            <li><a href="https://www.livebalancefit.com/post/beyond-the-calorie-decoding-your-metabolic-blueprint">Beyond the Calorie: Decoding Your Metabolic Blueprint<span>Nutrition</span></a></li>
-            <li><a href="https://www.livebalancefit.com/post/believe-in-your-best-self-health-lessons-from-ted-lasso">Believe in Your Best Self: Health Lessons from Ted Lasso<span>Mindset</span></a></li>
-            <li><a href="https://www.livebalancefit.com/post/10-lessons-from-100-miles-on-the-appalachian-trail">10 Lessons from 100 Miles on the Appalachian Trail<span>Adventure</span></a></li>
-          </ul>
-          <a class="more" href="https://www.livebalancefit.com/blog">All blog posts →</a>
-        </div>
-        <div>
-          <h3>Latest on social</h3>
-          <iframe class="fb" title="Latest posts from Live Balance Fit on Facebook" loading="lazy" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flivebalancefit%2F&amp;tabs=timeline&amp;width=500&amp;height=520&amp;small_header=true&amp;hide_cover=true&amp;show_facepile=false" allow="encrypted-media"></iframe>
-          <a class="more" href="https://www.facebook.com/livebalancefit/">Follow on Facebook →</a>
-        </div>
       </div>
     </div>
   </section>
@@ -302,26 +480,19 @@ footer a:hover{color:var(--navy)}
         <h2>Start with a free consultation.</h2>
         <p>In person or online. We talk about what you want, look at how you move, and you leave with a plan and your first three correctives.</p>
         <div class="ctas">
-          <a class="btn btn-gold" href="tel:+14144052855">Call or text (414) 405-2855</a>
+          <a class="btn btn-navy" href="tel:+14144052855">Call or text (414) 405-2855</a>
           <a class="btn btn-line" href="mailto:gstangel@livebalancefit.com?subject=Free%20consultation">Email Garrett</a>
         </div>
       </div>
-      <img src="img/say-lets-get-after-it.webp" alt="Garrett's avatar saying Let's get after it" loading="lazy">
+      <img src="img/say-lets-get-after-it.webp" alt="Garrett's avatar saying Let's get after it" loading="lazy" width="282" height="440">
     </div>
   </section>
 
-  <section class="proof" aria-label="Reviews and press">
-    <div class="wrap proof-grid">
-      <figure class="review" style="margin:0">
-        <span class="stars" aria-label="5 stars">★★★★★</span>
-        <q>Trainers are always friendly, cheerful and focused on you. I know my workout has been created with my specific strengths, weaknesses and needs in mind.</q>
-        <figcaption>Sandy Grady <span>· Balance Fitness client</span></figcaption>
-      </figure>
-      <div class="press">
-        <span class="lbl">As seen on</span>
-        <ul><li>TMJ4</li><li>FOX6</li><li>Journal Sentinel</li><li>Exercise is Medicine®</li></ul>
-        <p class="creds">ACE Master Trainer · Medical Exercise Specialist · Health Coach · ★ 4.7 on ClassPass</p>
-      </div>
+  <section class="press" aria-label="Press">
+    <div class="wrap">
+      <span class="lbl">As seen on</span>
+      <ul><li>TMJ4</li><li>FOX6</li><li>Journal Sentinel</li><li>Exercise is Medicine®</li></ul>
+      <p class="creds">ACE Master Trainer · Medical Exercise Specialist · Health Coach · ★ 4.7 on ClassPass</p>
     </div>
   </section>
 </main>
@@ -329,8 +500,10 @@ footer a:hover{color:var(--navy)}
 <footer>
   <div class="wrap">
     <span>Balance by Garrett · 4170 N Port Washington Rd, Glendale, WI · <a href="tel:+14144052855">(414) 405-2855</a> · <a href="mailto:gstangel@livebalancefit.com">gstangel@livebalancefit.com</a></span>
-    <span><a href="#shop">Shop</a> · <a href="#about">About</a> · <a href="https://www.livebalancefit.com/blog">Blog</a> · <a href="https://www.facebook.com/livebalancefit/">Facebook</a> · Bottomless Bucket returns in 2027</span>
+    <span><a href="#shop">Shop</a> · <a href="#about">About</a> · <a href="#blog">Blog</a> · Bottomless Bucket returns in 2027</span>
   </div>
 </footer>
+<script src="js/links.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
