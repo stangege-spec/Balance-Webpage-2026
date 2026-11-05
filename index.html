@@ -54,7 +54,7 @@ a{color:inherit}
 .top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .logo{display:flex;align-items:center;text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;color:var(--navy);min-width:0}
-.logo img{height:38px;width:auto;max-width:200px}
+.logo img{height:60px;width:auto;max-width:none;border-radius:8px}
 .logo small{font-family:var(--text);font-weight:600;font-size:13px;color:var(--muted);margin-left:6px}
 .nav .btn{padding:10px 18px;font-size:15px;white-space:nowrap;min-height:44px;box-shadow:none}
 .nav-links{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px;margin-left:auto;margin-right:6px}
@@ -230,6 +230,7 @@ footer a:hover{color:var(--navy)}
   .posts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav-links{display:none}
   .jump{display:flex}
+  .logo img{height:52px}
   html{scroll-padding-top:110px}
 }
 @media (max-width:760px){
@@ -266,7 +267,7 @@ footer a:hover{color:var(--navy)}
 }
 @media (max-width:380px){
   .ways{grid-template-columns:1fr}
-  .logo img{height:32px}
+  .logo img{height:40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -286,7 +287,7 @@ footer a:hover{color:var(--navy)}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="Balance by Garrett home"><img src="img/logo.png" alt="Balance by Garrett" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://static.wixstatic.com/media/b46f1b_b5e03ea472f54ab3ad414bae23992d7f~mv2.png/v1/fill/w_570,h_96,al_c,q_85/logo.png'}else{this.hidden=true;this.nextElementSibling.hidden=false}"><span hidden>Balance <small>by Garrett</small></span></a>
+    <a class="logo" href="#top" aria-label="Balance by Garrett home"><img src="img/logo.jpg" alt="Balance by Garrett, Custom Health and Wellness" width="720" height="217"></a>
     <nav class="nav-links" aria-label="Main"><a href="#ways">Train</a><a href="#app">App</a><a href="#workbook">Workbook</a><a href="#grow">Workshops</a><a href="#reviews-sec">Reviews</a><a href="#blog">Blog</a></nav>
     <a class="btn btn-gold" href="#start">Free consultation</a>
   </div>
@@ -315,7 +316,7 @@ footer a:hover{color:var(--navy)}
     <div class="wrap">
       <div class="philosophy">
         <span class="eyebrow">My approach</span>
-        <p>I blend health coaching with lifestyle medicine. Feeling better doesn't take a total overhaul. It takes small, doable steps. We start with a movement screen to see how your body moves and where it wants to begin, then take the same approach to every area of your life: sleep, stress, nutrition, mindset and relationships. Small, repeatable actions build habits, and habits change the way you feel.</p>
+        <p>I blend medical fitness, health coaching and lifestyle medicine. Feeling better doesn't take a total overhaul. It takes small, doable steps. We start with a movement screen to see how your body moves and where it wants to begin, then take the same approach to every area of your life: sleep, stress, nutrition, mindset and relationships. Small, repeatable actions build habits, and habits change the way you feel.</p>
         <span class="sig">Garrett</span>
       </div>
       <h2>Four ways to feel better.</h2>
