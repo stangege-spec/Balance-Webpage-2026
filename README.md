@@ -29,10 +29,9 @@ Google gives at most 5 recent reviews; the site shows the 4 and 5 star ones that
 
 ## The QR code
 
-`img/qr-app.svg` and `img/qr-app.png` point to **balancebygarrett.coach/app**, which forwards to the app section (`app/index.html`). When the app is in the stores, change that page's forward to the store link and every printed QR code follows.
+`img/qr-app.svg` and `img/qr-app.png` point to **balancebygarrett.coach/app** (`app/index.html`). Android phones go straight to Google Play; other phones land on the app section. When the App Store link exists, add it there for iPhones and every printed QR code follows.
 
 ## Still to add
 
-- **Logo:** save the Balance by Garrett logo as `img/logo.png` (about 570 × 96). Until then the header uses the logo from the Wix site.
 - **Links** still empty in `js/links.js`: App Store, Google Play, each Grow module's own Gumroad page, YouTube and other socials, and the Google profile.
 - **Booking:** a WellnessLiving booking link for the free consultation (now phone and email).

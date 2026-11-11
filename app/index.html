@@ -3,8 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Bare Min by Garrett</title>
-<meta http-equiv="refresh" content="0; url=/#app">
 <link rel="canonical" href="https://balancebygarrett.coach/#app">
+<script>
+  // The QR code points here. Android phones go straight to Google Play;
+  // everyone else lands on the app section until the App Store link exists.
+  var play = "https://play.google.com/store/apps/details?id=com.livebalancefit.baremin";
+  location.replace(/android/i.test(navigator.userAgent) ? play : "/#app");
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/#app"></noscript>
 </head>
 <body>
 <p><a href="/#app">Get the Bare Min by Garrett app</a></p>

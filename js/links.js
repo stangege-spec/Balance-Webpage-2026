@@ -3,23 +3,23 @@
 // and social icons stay hidden.
 window.BBG_LINKS = {
   // The workbook's Amazon product page.
-  amazon: "https://www.amazon.com/dp/B0HQ1F7LD1",
+  amazon: "https://www.amazon.com/Bare-Minimum-Be-Healthy/dp/B0HQ1F7LD1",
 
   // Bare Min by Garrett app.
   appStore: "",
-  googlePlay: "",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.livebalancefit.baremin",
 
-  // Grow modules on Gumroad. Until a module has its own product link, its
-  // button opens the Gumroad store page, where every product is listed.
-  grow1: "https://gstangel.gumroad.com/",
-  grow2: "https://gstangel.gumroad.com/",
-  grow3: "https://gstangel.gumroad.com/",
-  grow4: "https://gstangel.gumroad.com/",
-  grow5: "https://gstangel.gumroad.com/",
-  grow6: "https://gstangel.gumroad.com/",
-  grow7: "https://gstangel.gumroad.com/",
-  grow8: "https://gstangel.gumroad.com/",
+  // Grow modules and Trajectory on Gumroad.
+  grow1: "https://gstangel.gumroad.com/l/grow-mindset",
+  grow2: "https://gstangel.gumroad.com/l/grow-stress",
+  grow3: "https://gstangel.gumroad.com/l/grow-sleep",
+  grow4: "https://gstangel.gumroad.com/l/grow-nutrition",
+  grow5: "https://gstangel.gumroad.com/l/grow-activity",
+  grow6: "https://gstangel.gumroad.com/l/grow-relationships",
+  grow7: "https://gstangel.gumroad.com/l/grow-substances",
+  grow8: "https://gstangel.gumroad.com/l/grow-all-together",
   growAll: "https://gstangel.gumroad.com/l/grow-complete-set",
+  trajectory: "https://gstangel.gumroad.com/l/trajectory",
 
   // Socials.
   facebook: "https://www.facebook.com/livebalancefit/",
