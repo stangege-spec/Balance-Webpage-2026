@@ -3,7 +3,7 @@
 // and social icons stay hidden.
 window.BBG_LINKS = {
   // The workbook's Amazon product page.
-  amazon: "https://www.amazon.com/dp/B0HQ1F7LD1",
+  amazon: "https://www.amazon.com/Bare-Minimum-Be-Healthy/dp/B0HQ1F7LD1",
 
   // Bare Min by Garrett app.
   appStore: "",
