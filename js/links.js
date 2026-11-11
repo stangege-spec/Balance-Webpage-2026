@@ -7,7 +7,7 @@ window.BBG_LINKS = {
 
   // Bare Min by Garrett app.
   appStore: "",
-  googlePlay: "",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.livebalancefit.baremin",
 
   // Grow modules and Trajectory on Gumroad.
   grow1: "https://gstangel.gumroad.com/l/grow-mindset",
