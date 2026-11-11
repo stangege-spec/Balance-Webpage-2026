@@ -163,6 +163,12 @@ a{color:inherit}
 .mod h3{font-size:18px;line-height:1.15;flex:1}
 .mod h3 small{display:block;font-family:var(--text);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--remote);margin-bottom:2px}
 .mod .btn{padding:10px 16px;font-size:15px;min-height:44px;width:100%}
+.traj{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin:0 0 34px;padding:22px;border-radius:24px;background:#fff;color:var(--ink);box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.traj img{width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(27,58,92,.25)}
+.traj .kick{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)}
+.traj h3{font-size:clamp(26px,3.4vw,34px);color:var(--navy);margin-top:4px}
+.traj p{color:var(--muted);margin-top:8px;max-width:34em}
+.traj .btn{margin-top:16px}
 .bundle{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
 .bundle b{font-family:var(--display);font-size:22px}
 .bundle p{color:#d8f3ef;font-size:15px}
@@ -263,6 +269,9 @@ footer a:hover{color:var(--navy)}
   .bio img{width:150px}
   .final img{width:150px;justify-self:end;margin-top:-20px}
   .bundle .btn{width:100%}
+  .traj{grid-template-columns:1fr;gap:18px;padding:18px}
+  .traj img{width:min(220px,62vw);margin:0 auto}
+  .traj .btn{width:100%}
   .social a{flex:1 1 calc(50% - 6px);justify-content:center}
 }
 @media (max-width:380px){
@@ -338,7 +347,7 @@ footer a:hover{color:var(--navy)}
       <div class="shop-tabs">
         <a href="#app" style="--c:var(--gold)"><i>1</i>The app</a>
         <a href="#workbook" style="--c:var(--navy)"><i>2</i>The workbook</a>
-        <a href="#grow" style="--c:var(--remote)"><i>3</i>Grow workshops</a>
+        <a href="#grow" style="--c:var(--remote)"><i>3</i>Workshops</a>
       </div>
     </div>
   </div>
@@ -401,10 +410,19 @@ footer a:hover{color:var(--navy)}
     <div class="wrap">
       <div class="grow-top">
         <div>
-          <span class="tag"><i>3</i>Grow workshops</span>
-          <h2>Go deeper, 4 weeks at a time.</h2>
-          <p>Eight self-paced workshops, one pillar each. Every week has a Bare Minimum, Build and All In path, so you choose how far to go. Instant download after checkout.</p>
-          <div class="weeks"><span>4 weeks each</span><span>3 paths a week</span><span>Printable PDF</span></div>
+          <span class="tag"><i>3</i>Workshops</span>
+          <h2>Workshops to go deeper.</h2>
+          <p>Start with Trajectory, a 9-week tour of every pillar. Then go deeper with eight 4-week Grow workshops, one pillar each. Every week has a Bare Minimum, Build and All In path, so you choose how far to go. Instant download after checkout.</p>
+          <div class="weeks"><span>Self-paced</span><span>3 paths a week</span><span>Printable PDF</span></div>
+        </div>
+      </div>
+      <div class="traj">
+        <img src="img/trajectory.webp" alt="Trajectory: The 9-Week Bare Minimum Accelerator cover" width="420" height="517" loading="lazy">
+        <div>
+          <span class="kick">Start here · 9 weeks, every pillar</span>
+          <h3>Trajectory: Feel better, fast.</h3>
+          <p>The 9-week Bare Minimum Accelerator, self-paced. One focus a week: headspace, breathing, sleep, fuel, stretching, steps, strength and bursts.</p>
+          <a class="btn btn-navy" data-link="trajectory" href="#grow"><span class="label">Get Trajectory on Gumroad</span></a>
         </div>
       </div>
       <ul class="mods">
