@@ -130,7 +130,9 @@ a{color:inherit}
 .phone img{border-radius:34px;width:100%;aspect-ratio:1170/1992;object-fit:cover}
 .phone-wrap .sticker{position:absolute;left:-10px;bottom:-14px;width:120px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.2))}
 .phone-cap{text-align:center;color:var(--muted);font-size:14px;margin-top:16px}
-.stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px}
+.play-badge{display:inline-flex;align-items:center;text-decoration:none}
+.play-badge img{height:76px;width:auto;margin:-10px -12px}
 .qr{display:flex;align-items:center;gap:14px;margin-top:22px}
 .qr img{width:84px;height:84px;border-radius:10px;background:#fff;padding:6px;border:1px solid var(--line)}
 .qr span{font-size:14px;color:var(--muted)}
@@ -264,7 +266,8 @@ footer a:hover{color:var(--navy)}
   .rv{flex:0 0 84%;scroll-snap-align:start}
   .post{flex:0 0 78%;scroll-snap-align:start}
   .swipe-hint{display:block}
-  .stores .btn,.p-book .btn-gold{flex:1 1 100%}
+  .p-book .btn-gold{flex:1 1 100%}
+  .stores{justify-content:flex-start}
   .qr{display:none}
   .bio img{width:150px}
   .final img{width:150px;justify-self:end;margin-top:-20px}
@@ -366,8 +369,8 @@ footer a:hover{color:var(--navy)}
         </ul>
         <p class="price">Free <small>· Balance Plus $12.99 / mo or $69.99 / yr</small></p>
         <div class="stores">
+          <a class="play-badge" data-link="googlePlay" href="https://play.google.com/store/apps/details?id=com.livebalancefit.baremin" aria-label="Get Bare Min by Garrett on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="btn btn-navy" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Get it on Google Play</span></a>
           <a class="btn btn-navy" data-link="appStore" href="/app"><svg aria-hidden="true"><use href="#i-apple"/></svg><span class="label">App Store</span></a>
-          <a class="btn btn-navy" data-link="googlePlay" href="/app"><svg aria-hidden="true"><use href="#i-play"/></svg><span class="label">Google Play</span></a>
         </div>
         <div class="qr">
           <img src="img/qr-app.svg" alt="QR code for the Bare Min by Garrett app" width="84" height="84">
