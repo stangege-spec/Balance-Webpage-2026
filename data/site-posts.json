@@ -1,0 +1,12 @@
+{
+  "note": "Posts published on balancebygarrett.coach itself. scripts/update_feeds.py merges these with the livebalancefit.com feed into data/blog.json.",
+  "posts": [
+    {
+      "title": "What Are You Sacrificing?",
+      "link": "/blog/what-are-you-sacrificing/",
+      "date": "2026-11-23",
+      "image": "img/blog-sacrificing.jpg",
+      "summary": "No one gets anywhere without sacrifice. Veterans know it well. In civilian life, make sure the thing you give up is not your health, the very source of your energy."
+    }
+  ]
+}
