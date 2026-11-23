@@ -7,7 +7,7 @@ window.BBG_LINKS = {
 
   // Bare Min by Garrett app.
   appStore: "",
-  googlePlay: "",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.livebalancefit.baremin",
 
   // Grow modules on Gumroad. Until a module has its own product link, its
   // button opens the Gumroad store page, where every product is listed.
