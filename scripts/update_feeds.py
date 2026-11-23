@@ -80,6 +80,11 @@ def update_blog():
             "summary": summary(item.findtext("description")),
         })
     posts = [p for p in posts if p["title"] and p["link"]]
+    # Posts written for this site (data/site-posts.json) sit alongside the feed.
+    local = ROOT / "data/site-posts.json"
+    if local.exists():
+        links = {p["link"] for p in posts}
+        posts += [p for p in json.loads(local.read_text()).get("posts", []) if p["link"] not in links]
     posts.sort(key=lambda p: p["date"], reverse=True)
     if not posts:
         raise RuntimeError("feed had no posts")
