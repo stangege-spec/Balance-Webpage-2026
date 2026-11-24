@@ -174,6 +174,11 @@ a{color:inherit}
 .bio p{color:var(--muted);font-size:17px;margin-top:14px;max-width:40em}
 .bio .creds{font-size:14px;margin-top:16px}
 .bio a{font-weight:800;color:var(--gold-ink)}
+.bio .creds-title{font-size:14.5px;font-weight:800;color:var(--navy);margin-top:18px}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+.cred-grid h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.cred-grid ul{list-style:none;padding:0;margin:8px 0 0}
+.cred-grid li{font-size:14px;color:var(--muted);line-height:1.45;padding:5px 0;border-top:1px solid rgba(0,0,0,.08)}
 
 /* Reviews */
 .rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:26px}
@@ -260,6 +265,7 @@ footer a:hover{color:var(--navy)}
   .stores .btn,.p-book .btn-gold{flex:1 1 100%}
   .qr{display:none}
   .bio img{width:150px}
+  .cred-grid{grid-template-columns:1fr;gap:16px}
   .final img{width:150px;justify-self:end;margin-top:-20px}
   .bundle .btn{width:100%}
   .social a{flex:1 1 calc(50% - 6px);justify-content:center}
@@ -469,8 +475,43 @@ footer a:hover{color:var(--navy)}
         <span class="eyebrow">About</span>
         <h2>Meet Garrett.</h2>
         <p>Garrett Stangel is a Marine Corps veteran who has coached people to better health for nearly 30 years. He owns Balance Fitness in Glendale and co-owns 9Round in Wauwatosa. He has directed corporate wellness for QuadMed, taught exercise science at the university level and mentors trainers nationwide as a subject matter expert for ACE. He has also competed as an Ironman triathlete, powerlifter, bodybuilder and mixed martial artist.</p>
-        <p class="creds">M.S. Health and Wellness Management · National Board Certified Health &amp; Wellness Coach · ACSM Certified Exercise Physiologist · ACE Medical Exercise Specialist · ACLM Lifestyle Medicine Coach · CDC Diabetes Prevention Coach</p>
-        <p class="creds"><a href="https://www.livebalancefit.com/bio">Read Garrett's full bio →</a></p>
+        <p class="creds-title">Garrett Stangel, MS, MA, NBC-HWC, ACSM-EP-C/EIM-2, ACE CPT/CMES/HC · Health and Performance Coach</p>
+        <div class="cred-grid">
+          <div>
+            <h3>Education</h3>
+            <ul>
+              <li>M.S. in Health and Wellness Management, UW-Green Bay</li>
+              <li>M.A. in Education, Marquette University</li>
+              <li>B.S. in Kinesiology, UW-Milwaukee</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Certifications</h3>
+            <ul>
+              <li>National Board Certified Health &amp; Wellness Coach (NBHWC / NBME)</li>
+              <li>ACSM Certified Exercise Physiologist</li>
+              <li>ACSM Exercise is Medicine, Level 2</li>
+              <li>ACE Medical Exercise Specialist</li>
+              <li>ACE Certified Health Coach and Personal Trainer</li>
+              <li>ACLM Lifestyle Medicine Coach</li>
+              <li>Wellcoaches Certified Coach</li>
+              <li>CDC Diabetes Prevention Coach</li>
+              <li>First Aid / CPR / AED Certified</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Experience</h3>
+            <ul>
+              <li>Owner, Balance Fitness and Wellness, Glendale, WI</li>
+              <li>Co-owner, 9Round Fitness, Wauwatosa, WI</li>
+              <li>Subject Matter Expert, American Council on Exercise (ACE)</li>
+              <li>Former corporate wellness director, QuadMed</li>
+              <li>Former university exercise science adjunct faculty</li>
+              <li>Commercial club manager, high school coach and founder of several fitness facilities</li>
+              <li>U.S. Marine Corps veteran</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
