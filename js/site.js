@@ -81,6 +81,10 @@
           a.href = d.url; a.hidden = false; a.classList.remove("soon"); a.removeAttribute("aria-disabled");
         });
       }
+      if (d.write_url) {
+        var w = document.getElementById("write-review");
+        if (w) { w.href = d.write_url; w.hidden = false; }
+      }
       if (d.rating) {
         var sum = document.getElementById("rating");
         sum.querySelector("b").textContent = Number(d.rating).toFixed(1);
@@ -103,8 +107,19 @@
           img.onerror = function () { img.remove(); };
           cap.appendChild(img);
         }
-        var who = el("span", null, r.author);
-        if (r.when) who.appendChild(el("small", null, " · " + r.when + " on Google"));
+        var who = el("span");
+        if (r.profile) {
+          var link = el("a", null, r.author);
+          link.href = r.profile; link.target = "_blank"; link.rel = "noopener";
+          who.appendChild(link);
+        } else {
+          who.appendChild(document.createTextNode(r.author));
+        }
+        var when = r.when;
+        if (r.date) {
+          when = new Date(r.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+        }
+        who.appendChild(el("small", null, " · " + (when ? when + " on " : "") + "Google"));
         cap.appendChild(who);
         f.appendChild(cap);
         rev.appendChild(f);

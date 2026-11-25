@@ -126,18 +126,24 @@ def update_reviews():
         who = r.get("authorAttribution", {})
         reviews.append({
             "author": who.get("displayName", "Google user"),
+            "profile": who.get("uri", ""),
             "photo": who.get("photoUri", ""),
             "rating": r.get("rating"),
             "when": r.get("relativePublishTimeDescription", ""),
+            "date": (r.get("publishTime") or "")[:10],
             "text": text,
         })
+    # Newest first, so a fresh review shows up at the front of the row.
+    reviews.sort(key=lambda r: r["date"], reverse=True)
     write_if_changed(ROOT / "data/reviews.json", {
         "updated": NOW,
+        "place_id": place_id,
+        "write_url": "https://search.google.com/local/writereview?placeid=" + urllib.parse.quote(place_id),
         "rating": p.get("rating"),
         "count": p.get("userRatingCount"),
         "url": p.get("googleMapsUri", ""),
         "reviews": reviews,
-    }, ["rating", "count", "url", "reviews"])
+    }, ["rating", "count", "url", "write_url", "reviews"])
 
 
 if __name__ == "__main__":
