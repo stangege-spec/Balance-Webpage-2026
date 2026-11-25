@@ -1,7 +1,55 @@
 {
-  "updated": null,
-  "rating": null,
-  "count": null,
-  "url": "",
-  "reviews": []
+  "updated": "2026-11-25T13:35:32Z",
+  "place_id": "ChIJYbUROV8eBYgRz9nxQJY4yzQ",
+  "write_url": "https://search.google.com/local/writereview?placeid=ChIJYbUROV8eBYgRz9nxQJY4yzQ",
+  "rating": 5,
+  "count": 36,
+  "url": "https://maps.google.com/?cid=3804196528230357455&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+  "reviews": [
+    {
+      "author": "Sonia Ficklin",
+      "profile": "https://www.google.com/maps/contrib/103173249604731914609/reviews",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWWHjVvijVPXCmlXFTfypGJcf8MUB5PrUrmUkURGmy4J2ZnD8_v=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "when": "a week ago",
+      "date": "2026-11-12",
+      "text": "I had the pleasure of training with Garrett on an impromptu visit with my best friend. He immediately pinpointed my strengths and weaknesses and modified the workout to match my fitness level. He also provided some suggestions for continued growth in my health and wellness ventures. I felt accomplished and appropriately challenged in my time with Garrett. I now have an intimate appreciation for the benefit of a personal trainer!"
+    },
+    {
+      "author": "Dominique Samari",
+      "profile": "https://www.google.com/maps/contrib/107470727809793378530/reviews",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjU0vQTPO8YmnjSF0UGUYlQdwPtMpXPKHX6yqxmqdUXXb3bHY6Nm=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "when": "a week ago",
+      "date": "2026-11-12",
+      "text": "Garrett is absolutely the best! Since I’ve started training with him, iI am much stronger and have increased my endurance."
+    },
+    {
+      "author": "Sarah Schneider",
+      "profile": "https://www.google.com/maps/contrib/102623078265031786391/reviews",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWfYSL17aSNb6LO0YorqM0PlMn00qe2U2mlqjxjCbyeTx-1FH4=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "when": "9 months ago",
+      "date": "2026-02-17",
+      "text": "I have trained with Garrett and his team for 10+ years and I keep coming back.  What makes Garrett stand out?  He's caring, inspiring, and deeply knowledgeable.  He has seen me through rehabbing many injuries, work stresses, and goals from epic hiking to weight loss.  It's always personalized and just what I need at the time.  Top notch!"
+    },
+    {
+      "author": "Paul Schmitz",
+      "profile": "https://www.google.com/maps/contrib/115191041413808739013/reviews",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocJwJFtUKgJHybCLX2WxtuelC61lk_ZIZQnOXz05-W5RymQPWw=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 5,
+      "when": "9 months ago",
+      "date": "2026-02-04",
+      "text": "I have worked out with Garrett and his associates for almost a decade. My wife works out with him as well. Even my kids have worked with Garrett on workout plans they can do on their own. Balance is the key here - he has a custom plan for the individual and our goals and he uses a unique set of activities each session that over time you realize have strengthened you comprehensively. I trust him completely and highly recommend to anyone at any fitness level who wants a focused, thoughtful, and empathetic trainer."
+    },
+    {
+      "author": "Emily B",
+      "profile": "https://www.google.com/maps/contrib/110474460719385055751/reviews",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocK908kGR3R9u0pKp5I0bJwORlyoVyAy9HZCx4fuWN2q8hB7Sw=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "when": "9 months ago",
+      "date": "2026-02-03",
+      "text": "I have been a client for many, many years. I think Garrett is a phenomenal trainer. Not just because of the exercises that he tailors to me in any given stage of my life, but also his dedication to me as a client. His knowledge of the body and movement is exceptional. But he is also good at getting to the root of my hang ups. It's physical and mental health rolled into one. There aren't enough stars to give, so I have to settle for 5!!!"
+    }
+  ]
 }
