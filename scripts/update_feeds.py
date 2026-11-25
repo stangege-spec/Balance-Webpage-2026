@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -98,7 +99,15 @@ def places(path, key, fields, body=None):
     if body is not None:
         headers["Content-Type"] = "application/json"
         data = json.dumps(body).encode()
-    return json.loads(get("https://places.googleapis.com/v1/" + path, headers, data))
+    try:
+        return json.loads(get("https://places.googleapis.com/v1/" + path, headers, data))
+    except urllib.error.HTTPError as e:
+        # Google explains the problem (API not enabled, billing, key restrictions) in the body.
+        try:
+            msg = json.loads(e.read()).get("error", {}).get("message", "")
+        except ValueError:
+            msg = ""
+        raise RuntimeError(f"Google Places {e.code}: {msg or e.reason}") from None
 
 
 def update_reviews():
